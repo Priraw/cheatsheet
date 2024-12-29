@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS selectors and specificity</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1>Simple CSS Selectors</h1>
+      <p>
+        CSS Selectors allows you to select HTML elements tht you want ot style
+      </p>
+    </header>
+    <div class="table">
+      <table>
+        <caption>
+          There are five selector categories: Simple Selectors, Combinator
+          Selectors, Pseudo-class Selectors, Pseudo-element Selectors and
+          Attribute Selectors
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Selectors</th>
+            <th scope="col">Selector Example</th>
+            <th dcope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">#id</th>
+            <td>firstname</td>
+            <td>selects the element with id="firstname"</td>
+          </tr>
+          <tr>
+            <th scope="row">.class</th>
+            <td>.header</td>
+            <td>.header selects all elements with class="header"</td>
+          </tr>
+          <tr>
+            <th scope="row">element</th>
+            <td>p</td>
+            <td>All the &lt;p&gt; elements get selected</td>
+          </tr>
+          <tr>
+            <th scope="row">element,elements,..</th>
+            <td>div, p</td>
+            <td>
+              All the &lt;div&gt; elements and all the &lt;p&gt; elements gets
+              selected
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">*</th>
+            <td>*</td>
+            <td>Selects all the elements</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>CSS Specificity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Priority</th>
+            <th scope="col">Example</th>
+            <th dcope="col">Description</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Id Selectors</td>
+          <td>&lt;h1 style="color: pink;"&gt;</td>
+          <td>Highest priority, directly applied with the style attribute</td>
+        </tr>
+        <tr>
+          <td>Id selectors</td>
+          <td>#navbar</td>
+          <td>
+            Second highest priority, identified by the unique id attribute of an
+            element
+          </td>
+        </tr>
+        <tr>
+          <td>Classes and pseudo-classes</td>
+          <td>.test, :hover</td>
+          <td>Third highest priority, targeted using class names</td>
+        </tr>
+        <tr>
+          <td>Attributes</td>
+          <td>[type="text"]</td>
+          <td>Low priority, applies to attributes</td>
+        </tr>
+        <tr>
+          <td>Elements and pseudo-elements</td>
+          <td>h1, ::before, ::after</td>
+          <td>Lowest priority, applies to HTML elements and pseudo-elements</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
